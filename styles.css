@@ -1,0 +1,131 @@
+/* ===== Theme — change these to restyle the whole site ===== */
+:root {
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --text: #1c1b1a;
+  --muted: #6b6560;
+  --line: #e7e2db;
+  --accent: #3d5a80;        /* main brand colour */
+  --accent-soft: #e6ecf3;
+  --radius: 14px;
+  --max: 760px;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display: "Fraunces", Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141414;
+    --surface: #1d1d1d;
+    --text: #eeeae4;
+    --muted: #a39d96;
+    --line: #2e2c2a;
+    --accent: #8fb0d6;
+    --accent-soft: #1f2a37;
+  }
+}
+
+/* ===== Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
+h2 { font-family: var(--display); font-weight: 500; font-size: 1.75rem; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+p { margin: 0 0 1em; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+.section { padding: 56px 20px; border-top: 1px solid var(--line); }
+
+/* ===== Header ===== */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo {
+  font-family: var(--display); font-weight: 600; font-size: 1.25rem;
+  text-decoration: none; color: var(--text);
+}
+.nav nav { display: flex; gap: 20px; }
+.nav nav a { color: var(--muted); text-decoration: none; font-size: .95rem; }
+.nav nav a:hover { color: var(--text); }
+
+/* ===== Hero ===== */
+.hero { padding-top: 96px; padding-bottom: 72px; }
+.eyebrow { color: var(--muted); margin-bottom: .25em; }
+.hero h1 {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(2.6rem, 8vw, 4.2rem); letter-spacing: -.02em;
+}
+.lede { font-size: 1.2rem; color: var(--muted); max-width: 36ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn {
+  display: inline-block; padding: 11px 20px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface);
+  color: var(--text); text-decoration: none; font-weight: 500;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.btn:hover { transform: translateY(-1px); border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+/* ===== About ===== */
+.tags { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li {
+  background: var(--accent-soft); color: var(--accent);
+  padding: 5px 12px; border-radius: 999px; font-size: .9rem;
+}
+
+/* ===== Experience ===== */
+.timeline { list-style: none; padding: 0; margin: 0 0 24px; }
+.timeline li {
+  display: grid; grid-template-columns: 140px 1fr; gap: 20px;
+  padding: 18px 0; border-bottom: 1px dashed var(--line);
+}
+.timeline li:last-child { border-bottom: 0; }
+.when { color: var(--muted); font-size: .9rem; padding-top: 2px; }
+.timeline p { color: var(--muted); margin: 0; }
+.link { font-weight: 500; text-decoration: none; }
+.link:hover { text-decoration: underline; }
+
+/* ===== Building ===== */
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 24px;
+}
+.card p { color: var(--muted); }
+.badge {
+  display: inline-block; font-size: .8rem; font-weight: 600;
+  padding: 3px 10px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+}
+
+/* ===== Links ===== */
+.links { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.links a {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 20px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); color: var(--text); text-decoration: none; font-weight: 500;
+}
+.links a::after { content: "↗"; color: var(--muted); }
+.links a:hover { border-color: var(--accent); }
+
+/* ===== Footer ===== */
+.footer { padding: 40px 20px 60px; color: var(--muted); font-size: .9rem; }
+
+/* ===== Small screens ===== */
+@media (max-width: 560px) {
+  .nav nav { gap: 14px; }
+  .nav nav a { font-size: .85rem; }
+  .timeline li { grid-template-columns: 1fr; gap: 4px; }
+  .hero { padding-top: 64px; }
+}
