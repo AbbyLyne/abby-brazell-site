@@ -1,8 +1,8 @@
-# abbybrazell.com
+# The Hub - AB
 
 My personal website: who I am, my CV, where to find me, and the projects I'm working on.
 
-**WIP Live site:** [abbybrazell.com](https://abbybrazell.com)
+**WIP Live site:** [abbybrazell.com](https://www.abbybrazell.com)
 
 I'm a Decision Support Analyst moving further into data and analytics. This site is my home base for that, and it's also a hands-on way for me to learn web development.
 
