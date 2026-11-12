@@ -51,3 +51,4 @@ What I've changed and what I learned doing it. Newest first.
 | Date | What I did | What I learned |
 |------|-----------|----------------|
 | Nov 2026 | Set up GitHub repo, Cloudflare deployment and custom domain | How a Git repo connects to hosting so pushes go live automatically |
+| Nov 2026 | Moved site files into `public/`, set Cloudflare's build output directory, removed unused config, added an MIT licence | Cloudflare publishes every file in the output folder, so separating website files from project files keeps the site clean. The difference between Cloudflare Pages and Workers settings. |
