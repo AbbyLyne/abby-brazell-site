@@ -15,18 +15,19 @@ From there, the site is mine to own. I'm editing the content, making the design 
 ## Tech
 
 - **HTML and CSS only.** No framework and no build step, so every file is readable and easy to change.
-- **Hosting:** Cloudflare (Workers static assets), connected to this repo. Every push to `main` deploys automatically.
+- **Hosting:** Cloudflare Pages, connected to this repo. Every push to `main` deploys automatically, and only the `public/` folder is published to the site.
 - **Domain:** managed through Cloudflare DNS.
 
 ## Project structure
 
 ```
-public/
+public/           everything in here is published to abbybrazell.com
   index.html      the page content
   styles.css      layout, colours and fonts (theme variables at the top)
   404.html        shown for pages that don't exist
   cv.pdf          my CV
-wrangler.jsonc    Cloudflare deployment settings
+LICENSE           MIT licence for the code
+README.md         this file (stays on GitHub, not published)
 ```
 
 ## Running it locally
