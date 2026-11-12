@@ -44,6 +44,12 @@ No install needed. Download or clone the repo and open `public/index.html` in a 
 - [ ] Write a section of the site myself, from scratch
 - [ ] Add a projects page as my GitHub fills up
 
+## Licence
+
+The code (HTML and CSS) is available under the [MIT License](LICENSE).
+
+The content (including my CV, bio, writing and images) is © Abby Brazell. All rights reserved. Please don't reuse it without asking.
+
 ## Learning log
 
 What I've changed and what I learned doing it. Newest first.
