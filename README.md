@@ -21,26 +21,31 @@ From there, the site is mine to own. I'm editing the content, making the design 
 ## Project structure
 
 ```
-public/           everything in here is published to abbybrazell.com
-  index.html      the page content
-  styles.css      layout, colours and fonts (theme variables at the top)
-  404.html        shown for pages that don't exist
-  cv.pdf          my CV
-LICENSE           MIT licence for the code
-README.md         this file (stays on GitHub, not published)
+public/                 everything in here is published to abbybrazell.com
+  index.html            the page content
+  styles.css            layout, colours and fonts (theme variables at the top)
+  404.html              shown for pages that don't exist
+  Abby-Brazell-CV.pdf   my CV
+LICENSE                 MIT licence for the code
+README.md               this file (stays on GitHub, not published)
 ```
 
 ## Running it locally
 
 No install needed. Download or clone the repo and open `public/index.html` in a browser.
 
+## Projects
+
+- **[Seeing Things](https://abbylyne.github.io/seeing-things/)**: a "museum of patterns" where each exhibit tests a pattern in real data. Built with SQL (dbt on DuckDB), Python, R and Power BI. First exhibit: [Does pole position decide an F1 race?](https://abbylyne.github.io/seeing-things/stories/f1-pole-position.html) ([code](https://github.com/AbbyLyne/seeing-things))
+- **[Fabric Footprint](https://github.com/AbbyLyne/sustainable-fashion-analytics)**: an end-to-end pipeline estimating the environmental footprint of clothing sold in New Zealand (in progress).
+
 ## Roadmap
 
 - [x] Starter site generated and deployed to my domain
-- [ ] Replace placeholder content with my own about, experience and skills
+- [x] Replace placeholder content with my own about, experience and skills
 - [ ] Add my CV as a downloadable PDF
 - [ ] Choose my own colour scheme and fonts
-- [ ] Add my current project to the "Currently building" section
+- [x] Add my current project to the "Currently building" section
 - [ ] Write a section of the site myself, from scratch
 - [ ] Add a projects page as my GitHub fills up
 
@@ -56,5 +61,7 @@ What I've changed and what I learned doing it. Newest first.
 
 | Date | What I did | What I learned |
 |------|-----------|----------------|
-| Nov 2026 | Set up GitHub repo, Cloudflare deployment and custom domain | How a Git repo connects to hosting so pushes go live automatically |
+| Nov 2026 | Published Seeing Things Exhibit 1 and linked it from the "Currently building" card | Nothing new on the web side; the learning was in the project itself (see the Seeing Things learning log) |
 | Nov 2026 | Moved site files into `public/`, set Cloudflare's build output directory, removed unused config, added an MIT licence | Cloudflare publishes every file in the output folder, so separating website files from project files keeps the site clean. The difference between Cloudflare Pages and Workers settings. |
+| Nov 2026 | Set up GitHub repo, Cloudflare deployment and custom domain | How a Git repo connects to hosting so pushes go live automatically |
+| Nov 2026 | Found my local copy was 9 commits behind GitHub | `git status` compares against the last fetch, not live GitHub. `git fetch` first to see the truth, and `git pull` before starting work |
